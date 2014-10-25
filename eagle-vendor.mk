@@ -22,9 +22,3 @@ $(call inherit-product, vendor/sony/eagle/eagle-vendor-blobs.mk)
 # Prebuilt APKs
 PRODUCT_PACKAGES += \
     com.qualcomm.location
-
-# Prebuilt jars
-PRODUCT_PACKAGES += \
-    qcnvitems \
-    qcrilhook
-

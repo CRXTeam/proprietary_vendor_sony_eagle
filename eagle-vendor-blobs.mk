@@ -24,6 +24,7 @@ PRODUCT_COPY_FILES += \
     vendor/sony/eagle/proprietary/bin/adsprpcd:system/bin/adsprpcd \
     vendor/sony/eagle/proprietary/bin/bridgemgrd:system/bin/bridgemgrd \
     vendor/sony/eagle/proprietary/bin/btnvtool:system/bin/btnvtool \
+    vendor/sony/eagle/proprietary/bin/cnd:system/bin/cnd \
     vendor/sony/eagle/proprietary/bin/credmgrd:system/bin/credmgrd \
     vendor/sony/eagle/proprietary/bin/display_color_calib:system/bin/display_color_calib \
     vendor/sony/eagle/proprietary/bin/ds_fmc_appd:system/bin/ds_fmc_appd \
@@ -40,6 +41,7 @@ PRODUCT_COPY_FILES += \
     vendor/sony/eagle/proprietary/bin/netmgrd:system/bin/netmgrd \
     vendor/sony/eagle/proprietary/bin/port-bridge:system/bin/port-bridge \
     vendor/sony/eagle/proprietary/bin/ptt_socket_app:system/bin/ptt_socket_app \
+    vendor/sony/eagle/proprietary/bin/QmiGateDaemon:system/bin/QmiGateDaemon \
     vendor/sony/eagle/proprietary/bin/qcom-system-daemon:system/bin/qcom-system-daemon \
     vendor/sony/eagle/proprietary/bin/qmiproxy:system/bin/qmiproxy \
     vendor/sony/eagle/proprietary/bin/qmuxd:system/bin/qmuxd \
@@ -53,6 +55,7 @@ PRODUCT_COPY_FILES += \
     vendor/sony/eagle/proprietary/bin/sct_service:system/bin/sct_service \
     vendor/sony/eagle/proprietary/bin/suntrold:system/bin/suntrold \
     vendor/sony/eagle/proprietary/bin/system_monitor:system/bin/system_monitor \
+    vendor/sony/eagle/proprietary/bin/ta_qmi_service:system/bin/ta_qmi_service \
     vendor/sony/eagle/proprietary/bin/taimport:system/bin/taimport \
     vendor/sony/eagle/proprietary/bin/time_daemon:system/bin/time_daemon \
     vendor/sony/eagle/proprietary/bin/updatemiscta:system/bin/updatemiscta \
@@ -70,13 +73,41 @@ PRODUCT_COPY_FILES += \
     vendor/sony/eagle/proprietary/etc/acdbdata/QRD/QRD_Hdmi_cal.acdb:system/etc/acdbdata/QRD/QRD_Hdmi_cal.acdb \
     vendor/sony/eagle/proprietary/etc/acdbdata/QRD/QRD_Headset_cal.acdb:system/etc/acdbdata/QRD/QRD_Headset_cal.acdb \
     vendor/sony/eagle/proprietary/etc/acdbdata/QRD/QRD_Speaker_cal.acdb:system/etc/acdbdata/QRD/QRD_Speaker_cal.acdb \
-    vendor/sony/eagle/proprietary/etc/firmware/a225_pfp.fw:system/etc/firmware/a225_pfp.fw \
-    vendor/sony/eagle/proprietary/etc/firmware/a225_pm4.fw:system/etc/firmware/a225_pm4.fw \
-    vendor/sony/eagle/proprietary/etc/firmware/a225p5_pm4.fw:system/etc/firmware/a225p5_pm4.fw \
-    vendor/sony/eagle/proprietary/etc/firmware/a300_pfp.fw:system/etc/firmware/a300_pfp.fw \
-    vendor/sony/eagle/proprietary/etc/firmware/a300_pm4.fw:system/etc/firmware/a300_pm4.fw \
-    vendor/sony/eagle/proprietary/etc/firmware/a330_pfp.fw:system/etc/firmware/a330_pfp.fw \
-    vendor/sony/eagle/proprietary/etc/firmware/a330_pm4.fw:system/etc/firmware/a330_pm4.fw \
+    vendor/sony/eagle/proprietary/etc/acdbdata/VY52_VY53/VY52_VY53_Bluetooth_cal.acdb:system/etc/acdbdata/VY52_VY53/VY52_VY53_Bluetooth_cal.acdb \
+    vendor/sony/eagle/proprietary/etc/acdbdata/VY52_VY53/VY52_VY53_General_cal.acdb:system/etc/acdbdata/VY52_VY53/VY52_VY53_General_cal.acdb \
+    vendor/sony/eagle/proprietary/etc/acdbdata/VY52_VY53/VY52_VY53_Global_cal.acdb:system/etc/acdbdata/VY52_VY53/VY52_VY53_Global_cal.acdb \
+    vendor/sony/eagle/proprietary/etc/acdbdata/VY52_VY53/VY52_VY53_Handset_cal.acdb:system/etc/acdbdata/VY52_VY53/VY52_VY53_Handset_cal.acdb \
+    vendor/sony/eagle/proprietary/etc/acdbdata/VY52_VY53/VY52_VY53_Hdmi_cal.acdb:system/etc/acdbdata/VY52_VY53/VY52_VY53_Hdmi_cal.acdb \
+    vendor/sony/eagle/proprietary/etc/acdbdata/VY52_VY53/VY52_VY53_Headset_cal.acdb:system/etc/acdbdata/VY52_VY53/VY52_VY53_Headset_cal.acdb \
+    vendor/sony/eagle/proprietary/etc/acdbdata/VY52_VY53/VY52_VY53_Speaker_cal.acdb:system/etc/acdbdata/VY52_VY53/VY52_VY53_Speaker_cal.acdb \
+    vendor/sony/eagle/proprietary/etc/acdbdata/VY55_VY56/VY55_VY56_Bluetooth_cal.acdb:system/etc/acdbdata/VY55_VY56/VY55_VY56_Bluetooth_cal.acdb \
+    vendor/sony/eagle/proprietary/etc/acdbdata/VY55_VY56/VY55_VY56_General_cal.acdb:system/etc/acdbdata/VY55_VY56/VY55_VY56_General_cal.acdb \
+    vendor/sony/eagle/proprietary/etc/acdbdata/VY55_VY56/VY55_VY56_Global_cal.acdb:system/etc/acdbdata/VY55_VY56/VY55_VY56_Global_cal.acdb \
+    vendor/sony/eagle/proprietary/etc/acdbdata/VY55_VY56/VY55_VY56_Handset_cal.acdb:system/etc/acdbdata/VY55_VY56/VY55_VY56_Handset_cal.acdb \
+    vendor/sony/eagle/proprietary/etc/acdbdata/VY55_VY56/VY55_VY56_Hdmi_cal.acdb:system/etc/acdbdata/VY55_VY56/VY55_VY56_Hdmi_cal.acdb \
+    vendor/sony/eagle/proprietary/etc/acdbdata/VY55_VY56/VY55_VY56_Headset_cal.acdb:system/etc/acdbdata/VY55_VY56/VY55_VY56_Headset_cal.acdb \
+    vendor/sony/eagle/proprietary/etc/acdbdata/VY55_VY56/VY55_VY56_Speaker_cal.acdb:system/etc/acdbdata/VY55_VY56/VY55_VY56_Speaker_cal.acdb \
+    vendor/sony/eagle/proprietary/etc/acdbdata/VY58_VY59_AP/VY58_VY59_AP_Bluetooth_cal.acdb:system/etc/acdbdata/VY58_VY59_AP/VY58_VY59_AP_Bluetooth_cal.acdb \
+    vendor/sony/eagle/proprietary/etc/acdbdata/VY58_VY59_AP/VY58_VY59_AP_General_cal.acdb:system/etc/acdbdata/VY58_VY59_AP/VY58_VY59_AP_General_cal.acdb \
+    vendor/sony/eagle/proprietary/etc/acdbdata/VY58_VY59_AP/VY58_VY59_AP_Global_cal.acdb:system/etc/acdbdata/VY58_VY59_AP/VY58_VY59_AP_Global_cal.acdb \
+    vendor/sony/eagle/proprietary/etc/acdbdata/VY58_VY59_AP/VY58_VY59_AP_Handset_cal.acdb:system/etc/acdbdata/VY58_VY59_AP/VY58_VY59_AP_Handset_cal.acdb \
+    vendor/sony/eagle/proprietary/etc/acdbdata/VY58_VY59_AP/VY58_VY59_AP_Hdmi_cal.acdb:system/etc/acdbdata/VY58_VY59_AP/VY58_VY59_AP_Hdmi_cal.acdb \
+    vendor/sony/eagle/proprietary/etc/acdbdata/VY58_VY59_AP/VY58_VY59_AP_Headset_cal.acdb:system/etc/acdbdata/VY58_VY59_AP/VY58_VY59_AP_Headset_cal.acdb \
+    vendor/sony/eagle/proprietary/etc/acdbdata/VY58_VY59_AP/VY58_VY59_AP_Speaker_cal.acdb:system/etc/acdbdata/VY58_VY59_AP/VY58_VY59_AP_Speaker_cal.acdb \
+    vendor/sony/eagle/proprietary/etc/acdbdata/VY58_VY59_SP/VY58_VY59_SP_Bluetooth_cal.acdb:system/etc/acdbdata/VY58_VY59_SP/VY58_VY59_SP_Bluetooth_cal.acdb \
+    vendor/sony/eagle/proprietary/etc/acdbdata/VY58_VY59_SP/VY58_VY59_SP_General_cal.acdb:system/etc/acdbdata/VY58_VY59_SP/VY58_VY59_SP_General_cal.acdb \
+    vendor/sony/eagle/proprietary/etc/acdbdata/VY58_VY59_SP/VY58_VY59_SP_Global_cal.acdb:system/etc/acdbdata/VY58_VY59_SP/VY58_VY59_SP_Global_cal.acdb \
+    vendor/sony/eagle/proprietary/etc/acdbdata/VY58_VY59_SP/VY58_VY59_SP_Handset_cal.acdb:system/etc/acdbdata/VY58_VY59_SP/VY58_VY59_SP_Handset_cal.acdb \
+    vendor/sony/eagle/proprietary/etc/acdbdata/VY58_VY59_SP/VY58_VY59_SP_Hdmi_cal.acdb:system/etc/acdbdata/VY58_VY59_SP/VY58_VY59_SP_Hdmi_cal.acdb \
+    vendor/sony/eagle/proprietary/etc/acdbdata/VY58_VY59_SP/VY58_VY59_SP_Headset_cal.acdb:system/etc/acdbdata/VY58_VY59_SP/VY58_VY59_SP_Headset_cal.acdb \
+    vendor/sony/eagle/proprietary/etc/acdbdata/VY58_VY59_SP/VY58_VY59_SP_Speaker_cal.acdb:system/etc/acdbdata/VY58_VY59_SP/VY58_VY59_SP_Speaker_cal.acdb \
+    vendor/sony/eagle/proprietary/etc/acdbdata/VY58_VY59/VY58_VY59_Bluetooth_cal.acdb:system/etc/acdbdata/VY58_VY59/VY58_VY59_Bluetooth_cal.acdb \
+    vendor/sony/eagle/proprietary/etc/acdbdata/VY58_VY59/VY58_VY59_General_cal.acdb:system/etc/acdbdata/VY58_VY59/VY58_VY59_General_cal.acdb \
+    vendor/sony/eagle/proprietary/etc/acdbdata/VY58_VY59/VY58_VY59_Global_cal.acdb:system/etc/acdbdata/VY58_VY59/VY58_VY59_Global_cal.acdb \
+    vendor/sony/eagle/proprietary/etc/acdbdata/VY58_VY59/VY58_VY59_Handset_cal.acdb:system/etc/acdbdata/VY58_VY59/VY58_VY59_Handset_cal.acdb \
+    vendor/sony/eagle/proprietary/etc/acdbdata/VY58_VY59/VY58_VY59_Hdmi_cal.acdb:system/etc/acdbdata/VY58_VY59/VY58_VY59_Hdmi_cal.acdb \
+    vendor/sony/eagle/proprietary/etc/acdbdata/VY58_VY59/VY58_VY59_Headset_cal.acdb:system/etc/acdbdata/VY58_VY59/VY58_VY59_Headset_cal.acdb \
+    vendor/sony/eagle/proprietary/etc/acdbdata/VY58_VY59/VY58_VY59_Speaker_cal.acdb:system/etc/acdbdata/VY58_VY59/VY58_VY59_Speaker_cal.acdb \
     vendor/sony/eagle/proprietary/etc/firmware/adsp.b00:system/etc/firmware/adsp.b00 \
     vendor/sony/eagle/proprietary/etc/firmware/adsp.b01:system/etc/firmware/adsp.b01 \
     vendor/sony/eagle/proprietary/etc/firmware/adsp.b02:system/etc/firmware/adsp.b02 \
@@ -110,8 +141,13 @@ PRODUCT_COPY_FILES += \
     vendor/sony/eagle/proprietary/etc/firmware/modem.b03:system/etc/firmware/modem.b03 \
     vendor/sony/eagle/proprietary/etc/firmware/modem.b04:system/etc/firmware/modem.b04 \
     vendor/sony/eagle/proprietary/etc/firmware/modem.b05:system/etc/firmware/modem.b05 \
-    vendor/sony/eagle/proprietary/etc/firmware/modem.b06:system/etc/firmware/modem.b06 \
-    vendor/sony/eagle/proprietary/etc/firmware/modem.b09:system/etc/firmware/modem.b09 \
+    vendor/sony/eagle/proprietary/etc/firmware/modem.b08:system/etc/firmware/modem.b08 \
+    vendor/sony/eagle/proprietary/etc/firmware/modem.b10:system/etc/firmware/modem.b10 \
+    vendor/sony/eagle/proprietary/etc/firmware/modem.b10:system/etc/firmware/modem.b10 \
+    vendor/sony/eagle/proprietary/etc/firmware/modem.b11:system/etc/firmware/modem.b11 \
+    vendor/sony/eagle/proprietary/etc/firmware/modem.b13:system/etc/firmware/modem.b13 \
+    vendor/sony/eagle/proprietary/etc/firmware/modem.b14:system/etc/firmware/modem.b14 \
+    vendor/sony/eagle/proprietary/etc/firmware/modem.b15:system/etc/firmware/modem.b15 \
     vendor/sony/eagle/proprietary/etc/firmware/modem.b16:system/etc/firmware/modem.b16 \
     vendor/sony/eagle/proprietary/etc/firmware/modem.b17:system/etc/firmware/modem.b17 \
     vendor/sony/eagle/proprietary/etc/firmware/modem.b18:system/etc/firmware/modem.b18 \
@@ -119,11 +155,9 @@ PRODUCT_COPY_FILES += \
     vendor/sony/eagle/proprietary/etc/firmware/modem.b20:system/etc/firmware/modem.b20 \
     vendor/sony/eagle/proprietary/etc/firmware/modem.b21:system/etc/firmware/modem.b21 \
     vendor/sony/eagle/proprietary/etc/firmware/modem.b22:system/etc/firmware/modem.b22 \
-    vendor/sony/eagle/proprietary/etc/firmware/modem.b23:system/etc/firmware/modem.b23 \
-    vendor/sony/eagle/proprietary/etc/firmware/modem.b24:system/etc/firmware/modem.b24 \
+    vendor/sony/eagle/proprietary/etc/firmware/modem.b25:system/etc/firmware/modem.b25 \
+    vendor/sony/eagle/proprietary/etc/firmware/modem.b26:system/etc/firmware/modem.b26 \
     vendor/sony/eagle/proprietary/etc/firmware/modem.b27:system/etc/firmware/modem.b27 \
-    vendor/sony/eagle/proprietary/etc/firmware/modem.b28:system/etc/firmware/modem.b28 \
-    vendor/sony/eagle/proprietary/etc/firmware/modem.b29:system/etc/firmware/modem.b29 \
     vendor/sony/eagle/proprietary/etc/firmware/modem.mdt:system/etc/firmware/modem.mdt \
     vendor/sony/eagle/proprietary/etc/firmware/tzhdcp.b00:system/etc/firmware/tzhdcp.b00 \
     vendor/sony/eagle/proprietary/etc/firmware/tzhdcp.b01:system/etc/firmware/tzhdcp.b01 \
@@ -159,14 +193,10 @@ PRODUCT_COPY_FILES += \
     vendor/sony/eagle/proprietary/etc/firmware/wcnss.b08:system/etc/firmware/wcnss.b08 \
     vendor/sony/eagle/proprietary/etc/firmware/wcnss.b09:system/etc/firmware/wcnss.b09 \
     vendor/sony/eagle/proprietary/etc/firmware/wcnss.mdt:system/etc/firmware/wcnss.mdt \
-    vendor/sony/eagle/proprietary/etc/permissions/qcnvitems.xml:system/etc/permissions/qcnvitems.xml \
-    vendor/sony/eagle/proprietary/etc/permissions/qcrilhook.xml:system/etc/permissions/qcrilhook.xml \
-    vendor/sony/eagle/proprietary/framework/qcnvitems.jar:system/framework/qcnvitems.jar \
-    vendor/sony/eagle/proprietary/framework/qcrilhook.jar:system/framework/qcrilhook.jar \
     vendor/sony/eagle/proprietary/lib/egl/egl.cfg:system/lib/egl/egl.cfg \
     vendor/sony/eagle/proprietary/lib/egl/libGLES_android.so:system/lib/egl/libGLES_android.so \
-    vendor/sony/eagle/proprietary/lib/hw/camera.msm8226.so:system/lib/hw/camera.msm8226.so \
-    vendor/sony/eagle/proprietary/lib/hw/lights.msm8226.so:system/lib/hw/lights.msm8226.so \
+    vendor/sony/eagle/proprietary/lib/hw/camera.vendor.msm8226.so:system/lib/hw/camera.vendor.msm8226.so \
+    vendor/sony/eagle/proprietary/lib/hw/lights.vendor.msm8226.so:system/lib/hw/lights.vendor.msm8226.so \
     vendor/sony/eagle/proprietary/lib/hw/nfc_nci_pn547.msm8226.so:system/lib/hw/nfc_nci_pn547.msm8226.so \
     vendor/sony/eagle/proprietary/lib/libMiscTaAccessor.so:system/lib/libMiscTaAccessor.so \
     vendor/sony/eagle/proprietary/lib/lib_asb_tee.so:system/lib/lib_asb_tee.so \
@@ -196,6 +226,9 @@ PRODUCT_COPY_FILES += \
     vendor/sony/eagle/proprietary/lib/libnfc-nci.so:system/lib/libnfc-nci.so \
     vendor/sony/eagle/proprietary/lib/libpin-cache.so:system/lib/libpin-cache.so \
     vendor/sony/eagle/proprietary/lib/libprotobuf-c.so:system/lib/libprotobuf-c.so \
+    vendor/sony/eagle/proprietary/lib/libqmigateservice.so:system/lib/libqmigateservice.so \
+    vendor/sony/eagle/proprietary/lib/libqmigatenvjni.so:system/lib/libqmigatenvjni.so \
+    vendor/sony/eagle/proprietary/lib/libqmi_gate.so:system/lib/libqmi_gate.so \
     vendor/sony/eagle/proprietary/lib/libqomx_core.so:system/lib/libqomx_core.so \
     vendor/sony/eagle/proprietary/lib/libreference-ril.so:system/lib/libreference-ril.so \
     vendor/sony/eagle/proprietary/lib/libril.so:system/lib/libril.so \
@@ -205,6 +238,19 @@ PRODUCT_COPY_FILES += \
     vendor/sony/eagle/proprietary/lib/libsysmon_idd.so:system/lib/libsysmon_idd.so \
     vendor/sony/eagle/proprietary/lib/libsysmon_jni.so:system/lib/libsysmon_jni.so \
     vendor/sony/eagle/proprietary/lib/libta.so:system/lib/libta.so \
+    vendor/sony/eagle/proprietary/lib/soundfx/libaudiopreprocessing.so:system/lib/soundfx/libaudiopreprocessing.so \
+    vendor/sony/eagle/proprietary/lib/soundfx/libbundlewrapper.so:system/lib/soundfx/libbundlewrapper.so \
+    vendor/sony/eagle/proprietary/lib/soundfx/libdownmix.so:system/lib/soundfx/libdownmix.so \
+    vendor/sony/eagle/proprietary/lib/soundfx/libeffectproxy.so:system/lib/soundfx/libeffectproxy.so \
+    vendor/sony/eagle/proprietary/lib/soundfx/libldnhncr.so:system/lib/soundfx/libldnhncr.so \
+    vendor/sony/eagle/proprietary/lib/soundfx/libposteffectwrapper.so:system/lib/soundfx/libposteffectwrapper.so \
+    vendor/sony/eagle/proprietary/lib/soundfx/libpreeffectwrapper.so:system/lib/soundfx/libpreeffectwrapper.so \
+    vendor/sony/eagle/proprietary/lib/soundfx/libqcompostprocbundle.so:system/lib/soundfx/libqcompostprocbundle.so \
+    vendor/sony/eagle/proprietary/lib/soundfx/libqcomvisualizer.so:system/lib/soundfx/libqcomvisualizer.so \
+    vendor/sony/eagle/proprietary/lib/soundfx/libqcomvoiceprocessing.so:system/lib/soundfx/libqcomvoiceprocessing.so \
+    vendor/sony/eagle/proprietary/lib/soundfx/libreverbwrapper.so:system/lib/soundfx/libreverbwrapper.so \
+    vendor/sony/eagle/proprietary/lib/soundfx/libsoundaurawrapper.so:system/lib/soundfx/libsoundaurawrapper.so \
+    vendor/sony/eagle/proprietary/lib/soundfx/libvisualizer.so:system/lib/soundfx/libvisualizer.so \
     vendor/sony/eagle/proprietary/lib/sysmon/sysmon_batt_therm.so:system/lib/sysmon/sysmon_batt_therm.so \
     vendor/sony/eagle/proprietary/lib/sysmon/sysmon_charge_current_limit_level.so:system/lib/sysmon/sysmon_charge_current_limit_level.so \
     vendor/sony/eagle/proprietary/lib/sysmon/sysmon_charging.so:system/lib/sysmon/sysmon_charging.so \
@@ -234,11 +280,6 @@ PRODUCT_COPY_FILES += \
     vendor/sony/eagle/proprietary/vendor/firmware/keymaster/keymaster.mdt:system/vendor/firmware/keymaster/keymaster.mdt \
     vendor/sony/eagle/proprietary/vendor/firmware/libpn547_fw.so:system/vendor/firmware/libpn547_fw.so \
     vendor/sony/eagle/proprietary/vendor/lib/drm/libdrmwvmplugin.so:system/vendor/lib/drm/libdrmwvmplugin.so \
-    vendor/sony/eagle/proprietary/vendor/lib/egl/eglsubAndroid.so:system/vendor/lib/egl/eglsubAndroid.so \
-    vendor/sony/eagle/proprietary/vendor/lib/egl/libEGL_adreno.so:system/vendor/lib/egl/libEGL_adreno.so \
-    vendor/sony/eagle/proprietary/vendor/lib/egl/libGLESv1_CM_adreno.so:system/vendor/lib/egl/libGLESv1_CM_adreno.so \
-    vendor/sony/eagle/proprietary/vendor/lib/egl/libGLESv2_adreno.so:system/vendor/lib/egl/libGLESv2_adreno.so \
-    vendor/sony/eagle/proprietary/vendor/lib/egl/libq3dtools_adreno.so:system/vendor/lib/egl/libq3dtools_adreno.so \
     vendor/sony/eagle/proprietary/vendor/lib/hw/flp.default.so:system/vendor/lib/hw/flp.default.so \
     vendor/sony/eagle/proprietary/vendor/lib/hw/power.qcom.so:system/vendor/lib/hw/power.qcom.so \
     vendor/sony/eagle/proprietary/vendor/lib/lib-dplmedia.so:system/vendor/lib/lib-dplmedia.so \
@@ -256,8 +297,6 @@ PRODUCT_COPY_FILES += \
     vendor/sony/eagle/proprietary/vendor/lib/lib-rtpcore.so:system/vendor/lib/lib-rtpcore.so \
     vendor/sony/eagle/proprietary/vendor/lib/lib-rtpdaemoninterface.so:system/vendor/lib/lib-rtpdaemoninterface.so \
     vendor/sony/eagle/proprietary/vendor/lib/lib-rtpsl.so:system/vendor/lib/lib-rtpsl.so \
-    vendor/sony/eagle/proprietary/vendor/lib/libC2D2.so:system/vendor/lib/libC2D2.so \
-    vendor/sony/eagle/proprietary/vendor/lib/libCB.so:system/vendor/lib/libCB.so \
     vendor/sony/eagle/proprietary/vendor/lib/libCommandSvc.so:system/vendor/lib/libCommandSvc.so \
     vendor/sony/eagle/proprietary/vendor/lib/libDivxDrm.so:system/vendor/lib/libDivxDrm.so \
     vendor/sony/eagle/proprietary/vendor/lib/libExtendedExtractor.so:system/vendor/lib/libExtendedExtractor.so \
@@ -271,10 +310,7 @@ PRODUCT_COPY_FILES += \
     vendor/sony/eagle/proprietary/vendor/lib/libOmxMux.so:system/vendor/lib/libOmxMux.so \
     vendor/sony/eagle/proprietary/vendor/lib/libOmxQcelp13Dec.so:system/vendor/lib/libOmxQcelp13Dec.so \
     vendor/sony/eagle/proprietary/vendor/lib/libOmxWmaDec.so:system/vendor/lib/libOmxWmaDec.so \
-    vendor/sony/eagle/proprietary/vendor/lib/libOpenCL.so:system/vendor/lib/libOpenCL.so \
-    vendor/sony/eagle/proprietary/vendor/lib/libOpenVG.so:system/vendor/lib/libOpenVG.so \
     vendor/sony/eagle/proprietary/vendor/lib/libQSEEComAPI.so:system/vendor/lib/libQSEEComAPI.so \
-    vendor/sony/eagle/proprietary/vendor/lib/libRSDriver_adreno.so:system/vendor/lib/libRSDriver_adreno.so \
     vendor/sony/eagle/proprietary/vendor/lib/libSHIMDivxDrm.so:system/vendor/lib/libSHIMDivxDrm.so \
     vendor/sony/eagle/proprietary/vendor/lib/libStDrvInt.so:system/vendor/lib/libStDrvInt.so \
     vendor/sony/eagle/proprietary/vendor/lib/libSubSystemShutdown.so:system/vendor/lib/libSubSystemShutdown.so \
@@ -284,17 +320,12 @@ PRODUCT_COPY_FILES += \
     vendor/sony/eagle/proprietary/vendor/lib/libacdbmapper.so:system/vendor/lib/libacdbmapper.so \
     vendor/sony/eagle/proprietary/vendor/lib/libacdbrtac.so:system/vendor/lib/libacdbrtac.so \
     vendor/sony/eagle/proprietary/vendor/lib/libadiertac.so:system/vendor/lib/libadiertac.so \
-    vendor/sony/eagle/proprietary/vendor/lib/libadreno_utils.so:system/vendor/lib/libadreno_utils.so \
     vendor/sony/eagle/proprietary/vendor/lib/libadsprpc.so:system/vendor/lib/libadsprpc.so \
     vendor/sony/eagle/proprietary/vendor/lib/libalarmservice_jni.so:system/vendor/lib/libalarmservice_jni.so \
     vendor/sony/eagle/proprietary/vendor/lib/libaudcal.so:system/vendor/lib/libaudcal.so \
     vendor/sony/eagle/proprietary/vendor/lib/libaudioalsa.so:system/vendor/lib/libaudioalsa.so \
     vendor/sony/eagle/proprietary/vendor/lib/libbt-vendor.so:system/vendor/lib/libbt-vendor.so \
     vendor/sony/eagle/proprietary/vendor/lib/libbtnv.so:system/vendor/lib/libbtnv.so \
-    vendor/sony/eagle/proprietary/vendor/lib/libc2d2_z180.so:system/vendor/lib/libc2d2_z180.so \
-    vendor/sony/eagle/proprietary/vendor/lib/libc2d30-a3xx.so:system/vendor/lib/libc2d30-a3xx.so \
-    vendor/sony/eagle/proprietary/vendor/lib/libc2d30-a4xx.so:system/vendor/lib/libc2d30-a4xx.so \
-    vendor/sony/eagle/proprietary/vendor/lib/libc2d30.so:system/vendor/lib/libc2d30.so \
     vendor/sony/eagle/proprietary/vendor/lib/libchromatix_SKUAA_ST_gc0339_common.so:system/vendor/lib/libchromatix_SKUAA_ST_gc0339_common.so \
     vendor/sony/eagle/proprietary/vendor/lib/libchromatix_SKUAA_ST_gc0339_default_video.so:system/vendor/lib/libchromatix_SKUAA_ST_gc0339_default_video.so \
     vendor/sony/eagle/proprietary/vendor/lib/libchromatix_SKUAA_ST_gc0339_preview.so:system/vendor/lib/libchromatix_SKUAA_ST_gc0339_preview.so \
@@ -429,7 +460,6 @@ PRODUCT_COPY_FILES += \
     vendor/sony/eagle/proprietary/vendor/lib/libfastcvadsp_stub.so:system/vendor/lib/libfastcvadsp_stub.so \
     vendor/sony/eagle/proprietary/vendor/lib/libfastcvopt.so:system/vendor/lib/libfastcvopt.so \
     vendor/sony/eagle/proprietary/vendor/lib/libgeofence.so:system/vendor/lib/libgeofence.so \
-    vendor/sony/eagle/proprietary/vendor/lib/libgsl.so:system/vendor/lib/libgsl.so \
     vendor/sony/eagle/proprietary/vendor/lib/libidl.so:system/vendor/lib/libidl.so \
     vendor/sony/eagle/proprietary/vendor/lib/libizat_core.so:system/vendor/lib/libizat_core.so \
     vendor/sony/eagle/proprietary/vendor/lib/libjpegdhw.so:system/vendor/lib/libjpegdhw.so \
@@ -439,7 +469,6 @@ PRODUCT_COPY_FILES += \
     vendor/sony/eagle/proprietary/vendor/lib/liblistenhardware.so:system/vendor/lib/liblistenhardware.so \
     vendor/sony/eagle/proprietary/vendor/lib/liblistenjni.so:system/vendor/lib/liblistenjni.so \
     vendor/sony/eagle/proprietary/vendor/lib/liblistensoundmodel.so:system/vendor/lib/liblistensoundmodel.so \
-    vendor/sony/eagle/proprietary/vendor/lib/libllvm-qcom.so:system/vendor/lib/libllvm-qcom.so \
     vendor/sony/eagle/proprietary/vendor/lib/libloc_ext.so:system/vendor/lib/libloc_ext.so \
     vendor/sony/eagle/proprietary/vendor/lib/liblocationservice.so:system/vendor/lib/liblocationservice.so \
     vendor/sony/eagle/proprietary/vendor/lib/libmm-abl-oem.so:system/vendor/lib/libmm-abl-oem.so \
@@ -533,10 +562,6 @@ PRODUCT_COPY_FILES += \
     vendor/sony/eagle/proprietary/vendor/lib/libril-qc-qmi-1.so:system/vendor/lib/libril-qc-qmi-1.so \
     vendor/sony/eagle/proprietary/vendor/lib/libril-qcril-hook-oem.so:system/vendor/lib/libril-qcril-hook-oem.so \
     vendor/sony/eagle/proprietary/vendor/lib/librpmb.so:system/vendor/lib/librpmb.so \
-    vendor/sony/eagle/proprietary/vendor/lib/librs_adreno.so:system/vendor/lib/librs_adreno.so \
-    vendor/sony/eagle/proprietary/vendor/lib/librs_adreno_sha1.so:system/vendor/lib/librs_adreno_sha1.so \
-    vendor/sony/eagle/proprietary/vendor/lib/libsc-a2xx.so:system/vendor/lib/libsc-a2xx.so \
-    vendor/sony/eagle/proprietary/vendor/lib/libsc-a3xx.so:system/vendor/lib/libsc-a3xx.so \
     vendor/sony/eagle/proprietary/vendor/lib/libscale.so:system/vendor/lib/libscale.so \
     vendor/sony/eagle/proprietary/vendor/lib/libscve.so:system/vendor/lib/libscve.so \
     vendor/sony/eagle/proprietary/vendor/lib/libsensor1.so:system/vendor/lib/libsensor1.so \
