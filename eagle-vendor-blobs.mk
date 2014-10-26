@@ -200,7 +200,6 @@ PRODUCT_COPY_FILES += \
     vendor/sony/eagle/proprietary/lib/hw/nfc_nci_pn547.msm8226.so:system/lib/hw/nfc_nci_pn547.msm8226.so \
     vendor/sony/eagle/proprietary/lib/libMiscTaAccessor.so:system/lib/libMiscTaAccessor.so \
     vendor/sony/eagle/proprietary/lib/lib_asb_tee.so:system/lib/lib_asb_tee.so \
-    vendor/sony/eagle/proprietary/lib/libcamera_client.so:system/lib/libcamera_client.so \
     vendor/sony/eagle/proprietary/lib/libcamera_metadata.so:system/lib/libcamera_metadata.so \
     vendor/sony/eagle/proprietary/lib/libcameraservice.so:system/lib/libcameraservice.so \
     vendor/sony/eagle/proprietary/lib/libcnefeatureconfig.so:system/lib/libcnefeatureconfig.so \
