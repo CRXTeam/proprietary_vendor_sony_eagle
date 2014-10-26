@@ -35,6 +35,7 @@ PRODUCT_COPY_FILES += \
     vendor/sony/eagle/proprietary/bin/hvdcp:system/bin/hvdcp \
     vendor/sony/eagle/proprietary/bin/irsc_util:system/bin/irsc_util \
     vendor/sony/eagle/proprietary/bin/led_service:system/bin/led_service \
+    vendor/sony/eagle/proprietary/bin/memsicd:system/bin/memsicd \
     vendor/sony/eagle/proprietary/bin/mm-pp-daemon:system/bin/mm-pp-daemon \
     vendor/sony/eagle/proprietary/bin/mm-qcamera-daemon:system/bin/mm-qcamera-daemon \
     vendor/sony/eagle/proprietary/bin/mpdecision:system/bin/mpdecision \
