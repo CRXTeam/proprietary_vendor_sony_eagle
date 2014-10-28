@@ -200,9 +200,14 @@ PRODUCT_COPY_FILES += \
     vendor/sony/eagle/proprietary/lib/hw/lights.vendor.msm8226.so:system/lib/hw/lights.vendor.msm8226.so \
     vendor/sony/eagle/proprietary/lib/hw/nfc_nci_pn547.msm8226.so:system/lib/hw/nfc_nci_pn547.msm8226.so \
     vendor/sony/eagle/proprietary/lib/hw/sensors.msm8226.so:system/lib/hw/sensors.msm8226.so \
+    vendor/sony/eagle/proprietary/lib/hw/sensorsecond.msm8226.so:system/lib/hw/sensorsecond.msm8226.so \
+    vendor/sony/eagle/proprietary/lib/hw/sensors.msm8226.so:system/lib/hw/sensors.msm8226.so \
     vendor/sony/eagle/proprietary/lib/libMiscTaAccessor.so:system/lib/libMiscTaAccessor.so \
     vendor/sony/eagle/proprietary/lib/lib_asb_tee.so:system/lib/lib_asb_tee.so \
+    vendor/sony/eagle/proprietary/lib/libyasalgo.so:system/lib/libyasalgo.so \
     vendor/sony/eagle/proprietary/lib/libcnefeatureconfig.so:system/lib/libcnefeatureconfig.so \
+    vendor/sony/eagle/proprietary/lib/libface.so:system/lib/libface.so \
+    vendor/sony/eagle/proprietary/lib/libface_wrapper.so:system/lib/libface_wrapper.so \
     vendor/sony/eagle/proprietary/lib/libidd.so:system/lib/libidd.so \
     vendor/sony/eagle/proprietary/lib/libkeyctrl.so:system/lib/libkeyctrl.so \
     vendor/sony/eagle/proprietary/lib/liblights-core.so:system/lib/liblights-core.so \
